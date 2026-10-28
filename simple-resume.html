@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramji Sharma - Resume</title>
+  <style>
+    /* Simple, Clean, ATS-Friendly Resume Styling */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #222222;
+      line-height: 1.5;
+      font-size: 13px;
+      padding: 20px 15px;
+    }
+
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px 35px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+    }
+
+    /* Print Button Bar */
+    .print-bar {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .print-btn {
+      background: #0a3d62;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 13px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .print-btn:hover {
+      background: #072a44;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0a3d62;
+      padding-bottom: 15px;
+      margin-bottom: 18px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      color: #0a3d62;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .header .subtitle {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+
+    .header .contact-info {
+      font-size: 12.5px;
+      color: #555555;
+      line-height: 1.6;
+    }
+
+    .header .contact-info a {
+      color: #0a3d62;
+      text-decoration: none;
+    }
+
+    .header .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Headings */
+    h2 {
+      font-size: 14px;
+      color: #0a3d62;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid #0a3d62;
+      padding-bottom: 4px;
+      margin-top: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 6px;
+      color: #333333;
+      text-align: justify;
+    }
+
+    /* Technical Skills Table */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+
+    .skills-table td {
+      padding: 5px 6px;
+      vertical-align: top;
+      font-size: 12.5px;
+    }
+
+    .skills-table td.skill-title {
+      font-weight: bold;
+      color: #222222;
+      width: 25%;
+      border-right: 2px solid #e0e0e0;
+    }
+
+    .skills-table td.skill-desc {
+      width: 75%;
+      padding-left: 12px;
+      color: #333333;
+    }
+
+    /* Professional Experience */
+    .job-block {
+      margin-bottom: 14px;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .job-title {
+      font-weight: bold;
+      color: #0a3d62;
+    }
+
+    .job-company {
+      font-weight: bold;
+      color: #222222;
+    }
+
+    .job-date {
+      font-size: 12px;
+      font-style: italic;
+      color: #555555;
+      white-space: nowrap;
+    }
+
+    /* Bullet Points */
+    ul {
+      margin-left: 18px;
+      margin-bottom: 8px;
+    }
+
+    li {
+      margin-bottom: 4px;
+      color: #333333;
+      text-align: justify;
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    /* Projects */
+    .project-block {
+      margin-bottom: 12px;
+    }
+
+    .project-title {
+      font-weight: bold;
+      color: #0a3d62;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    /* Earlier Experience Table */
+    .earlier-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      margin-bottom: 10px;
+    }
+
+    .earlier-table th, .earlier-table td {
+      border: 1px solid #cccccc;
+      padding: 6px 8px;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    .earlier-table th {
+      background-color: #f0f4f8;
+      color: #0a3d62;
+      font-weight: bold;
+    }
+
+    /* Two column grid for Education & Certifications */
+    .row {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .col {
+      flex: 1;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+        font-size: 11pt;
+      }
+
+      .print-bar {
+        display: none;
+      }
+
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+
+      @page {
+        margin: 12mm 15mm;
+        size: A4;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container">
+    <!-- Print Button (Hidden on Print) -->
+    <div class="print-bar">
+      <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>RAMJI SHARMA</h1>
+      <div class="subtitle">Azure DevOps Engineer | Cloud Infrastructure | CI/CD Specialist</div>
+      <div class="contact-info">
+        Mumbai, India | +91-7021381066 | 
+        <a href="mailto:ramjish0586@gmail.com">ramjish0586@gmail.com</a> | 
+        LinkedIn: <a href="https://www.linkedin.com/in/ramji-sharma-aa762b8b/" target="_blank">linkedin.com/in/ramji-sharma-aa762b8b</a>
+      </div>
+    </div>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <h2>Professional Summary</h2>
+    <p>
+      Results-driven Azure DevOps Engineer with 5+ years of hands-on experience (11 years total in IT) designing, automating, and managing cloud infrastructure on AWS and Azure for high-availability BFSI environments (HDFC Bank, IDFC First Bank). Proven expertise in building end-to-end CI/CD pipelines using Terraform automation with Azure DevOps, GitHub Actions, and GitLab CI/CD, and provisioning secure, well-governed cloud landing zones (Azure Landing Zone, AWS Landing Zone) with Terraform. Strong background in containerization (Docker, Kubernetes, AKS, EKS, GKE), DevSecOps practices, cloud cost optimization, Security, Compliance and automation using Ansible, Bash, Python, and PowerShell. Actively exploring agentic AI to streamline DevOps workflows and reduce manual effort.
+    </p>
+
+    <!-- TECHNICAL SKILLS -->
+    <h2>Technical Skills</h2>
+    <table class="skills-table">
+      <tr>
+        <td class="skill-title">Cloud Platforms</td>
+        <td class="skill-desc">Microsoft Azure, Amazon Web Services (AWS), Google Cloud (GCP)</td>
+      </tr>
+      <tr>
+        <td class="skill-title">CI/CD Tools</td>
+        <td class="skill-desc">Azure DevOps | GitHub Actions | DevSecOps | Git | GitHub | Azure Repos</td>
+      </tr>
+      <tr>
+        <td class="skill-title">IaC & Automation</td>
+        <td class="skill-desc">Terraform | ARM/Bicep | Azure Automation | Azure CLI | PowerShell | Bash | Python</td>
+      </tr>
+      <tr>
+        <td class="skill-title">Containers & Orchestration</td>
+        <td class="skill-desc">AKS | Kubernetes | Docker | Helm | ACR</td>
+      </tr>
+      <tr>
+        <td class="skill-title">Source Control</td>
+        <td class="skill-desc">Git, GitHub, Azure Repos, GitLab, Bitbucket</td>
+      </tr>
+      <tr>
+        <td class="skill-title">Scripting</td>
+        <td class="skill-desc">Bash, PowerShell, Python</td>
+      </tr>
+      <tr>
+        <td class="skill-title">Security & Governance</td>
+        <td class="skill-desc">Azure Policy | Azure Key Vault | tfsec | TFLint | TruffleHog | Super Linter | Terratest</td>
+      </tr>
+      <tr>
+        <td class="skill-title">Monitoring & Observability</td>
+        <td class="skill-desc">Azure Monitor | Log Analytics | Application Insights | Prometheus | Grafana | OpenCost | Dynatrace</td>
+      </tr>
+      <tr>
+        <td class="skill-title">ITSM / Ticketing</td>
+        <td class="skill-desc">ZOHO, ServiceNow</td>
+      </tr>
+      <tr>
+        <td class="skill-title">Operating Systems</td>
+        <td class="skill-desc">Red Hat Linux, Ubuntu, Windows Server</td>
+      </tr>
+    </table>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <h2>Professional Experience</h2>
+
+    <!-- TheDigifac Services / HDFC Bank -->
+    <div class="job-block">
+      <div class="job-header">
+        <div>
+          <span class="job-title">DevOps Engineer</span> | 
+          <span class="job-company">TheDigifac Services Pvt. Ltd. (Client: HDFC Bank)</span>
+        </div>
+        <span class="job-date">Jan 2026 – Present</span>
+      </div>
+      <ul>
+        <li>Creating, maintaining & managing GitHub Actions and Azure DevOps CI/CD pipelines for enterprise banking applications deployed on IIS, NGINX, AKS, EKS platform through Terraform.</li>
+        <li>Configured and managed Azure Cosmos DB, including database and container creation, partition key configuration, throughput (RU/s) management, and indexing policies.</li>
+        <li>Managed database access, Azure RBAC, monitoring, backup and restore, and performance optimization for reliable application operations.</li>
+        <li>Creating & managing Azure Landing Zone using Terraform, provisioning Azure VMs, VMSS, VNETs, NSGs, Load Balancers, Application Gateway, cloud security, cost optimization, DR, backup, compliance, and governance.</li>
+        <li>Creating, managing Terraform reusable child and parent Module, ForEach, map, Terraform variables, Terraform tfvars, providers, Terraform drift, Terraform backend block, Terraform tfstate locking using Azure Blob, S3 bucket with DynamoDB.</li>
+        <li>Manage Azure cloud infrastructure end-to-end and automate provisioning using Terraform, building reusable modules that reduced deployment cycles by 65% and manual effort by 40%.</li>
+        <li>Support production deployments and end-to-end platform monitoring for a banking system, maintaining 99% SLA compliance.</li>
+        <li>Design and manage Azure Landing Zones including subscriptions, VNets, NSGs, VPNs, RBAC and governance policies.</li>
+        <li>Experience with Docker, AKS, PowerShell/Azure CLI, and Blue/Green or Canary deploy.</li>
+        <li>Build YAML-based CI/CD pipelines, implement IaC (Bicep/Terraform); configure Azure Monitor; manage automated Cosmos DB deployments.</li>
+        <li>Perform Terraform security reviews and use tfsec, TFLint, TruffleHog and Super Linter for IaC, secrets and code-quality checks.</li>
+        <li>Enforced least-privilege access using Azure RBAC and PIM, managed enterprise network security with NSGs, Azure Firewall, WAF, and DDoS Protection.</li>
+        <li>Design and support CI/CD pipelines for infrastructure and application deployments.</li>
+        <li>Integrated SAST, DAST, SCA, Secret Scanning, IaC Scanning, and Container Security into CI/CD pipelines; implemented OIDC Workload Identity Federation to eliminate long-lived service principal secrets.</li>
+        <li>Managed and implement Azure DevOps automation, Git Branch Protection, CODEOWNERS, and mandatory PR reviews using Git Flow, Trunk-Based and GitHub branching strategies.</li>
+      </ul>
+    </div>
+
+    <!-- Puthur Infotech -->
+    <div class="job-block">
+      <div class="job-header">
+        <div>
+          <span class="job-title">DevOps Engineer</span> | 
+          <span class="job-company">Puthur Infotech Pvt. Ltd.</span>
+        </div>
+        <span class="job-date">Feb 2025 – Jan 2026</span>
+      </div>
+      <ul>
+        <li>Managed cloud infrastructure and CI/CD operations supporting enterprise client deployments; implemented automation workflows using Terraform and Ansible for provisioning and configuration.</li>
+        <li>Managed Azure Landing Zone (VNETs, NSGs, Load Balancers, Application Gateway) covering cloud security, cost optimization, DR, backup, compliance, and governance.</li>
+        <li>Managed Java and Python-based applications in Azure; collaborated with a 10-member cross-functional team to ensure zero-downtime deployments.</li>
+        <li>Maintained semantic versioning and release management; prevented secret leakage via automated secret scanning; supported Azure Budgets, Cost Alerts, and Cost Analysis dashboards.</li>
+        <li>Managed High Availability architecture using Availability Zones, Load Balancers, and Geo-Replication; automated provisioning, validation, deployment, and rollback.</li>
+      </ul>
+    </div>
+
+    <!-- SPRUCE IT / Infosys -->
+    <div class="job-block">
+      <div class="job-header">
+        <div>
+          <span class="job-title">DevOps Engineer</span> | 
+          <span class="job-company">SPRUCE IT Pvt. Ltd. (Client: Infosys)</span>
+        </div>
+        <span class="job-date">Nov 2024 – Feb 2025</span>
+      </div>
+      <ul>
+        <li>Worked on GitHub-to-GitLab migration and set up GitLab CI/CD pipelines in GCP environments.</li>
+        <li>Managed containerized workloads on Google Kubernetes Engine (GKE).</li>
+        <li>Supported Java and Python-based application build and release pipelines.</li>
+      </ul>
+    </div>
+
+    <!-- Vserv Infosystems / HDFC Bank -->
+    <div class="job-block">
+      <div class="job-header">
+        <div>
+          <span class="job-title">DevOps Engineer</span> | 
+          <span class="job-company">Vserv Infosystems Pvt. Ltd. (Client: HDFC Bank)</span>
+        </div>
+        <span class="job-date">Feb 2023 – Jul 2024</span>
+      </div>
+      <ul>
+        <li>Implemented GitHub Actions CI/CD pipelines for .NET Core, Java, Salesforce, and MuleSoft API projects.</li>
+        <li>Integrated SonarQube for automated code quality checks across DEV, UAT, QA, and MAIN branches.</li>
+        <li>Managed multi-environment Git branching strategy and deployment automation on AWS and Azure.</li>
+        <li>Used ZOHO for incident and change request management across environments.</li>
+      </ul>
+    </div>
+
+    <!-- Team Computers / IDFC First Bank -->
+    <div class="job-block">
+      <div class="job-header">
+        <div>
+          <span class="job-title">DevOps Support Engineer</span> | 
+          <span class="job-company">Team Computers Pvt. Ltd. (Client: IDFC First Bank)</span>
+        </div>
+        <span class="job-date">Jul 2021 – Feb 2023</span>
+      </div>
+      <ul>
+        <li>Provided AWS infrastructure support and managed the DevOps toolchain for banking applications.</li>
+        <li>Deployed and maintained containerized workloads using EKS, Docker, and AWS ECR.</li>
+        <li>Managed Linux (RHEL) and Windows server environments; resolved infrastructure incidents via ZOHO.</li>
+        <li>Supported DEV, UAT, Pre-PROD, and PROD environments with minimal downtime.</li>
+      </ul>
+    </div>
+
+    <!-- Techigent Technologies / HDFC Bank -->
+    <div class="job-block">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Software Support Engineer</span> | 
+          <span class="job-company">Techigent Technologies Pvt. Ltd. (Client: HDFC Bank)</span>
+        </div>
+        <span class="job-date">Aug 2020 – Jan 2021</span>
+      </div>
+      <ul>
+        <li>Provided IT infrastructure and application support for banking systems across DEV, UAT, Pre-PROD, and PROD environments.</li>
+        <li>Provided AWS infrastructure support and managed the DevOps toolchain for banking applications.</li>
+      </ul>
+    </div>
+
+    <!-- Ace Brain / TISS Mumbai -->
+    <div class="job-block">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Linux Support Engineer</span> | 
+          <span class="job-company">Ace Brain System & Software Pvt. Ltd. (Client: TISS Mumbai)</span>
+        </div>
+        <span class="job-date">Apr 2018 – Jun 2020</span>
+      </div>
+      <ul>
+        <li>Managed Linux/Windows servers, networking, and end-user support for Tata Institute of Social Sciences.</li>
+        <li>Supported DEV, UAT, Pre-PROD, and PROD environments with minimal downtime.</li>
+      </ul>
+    </div>
+
+    <!-- KEY PROJECTS (HIGHLIGHTS) -->
+    <h2>Key Projects (Highlights)</h2>
+
+    <div class="project-block">
+      <div class="project-title">1. AKS Deployment & GitOps with ArgoCD</div>
+      <ul>
+        <li>Designed and deployed Azure Kubernetes Service (AKS) using Terraform (VNet, ACR, AGIC, Key Vault, Log Analytics).</li>
+        <li>Implemented GitOps workflow using ArgoCD with automated sync & progressive delivery.</li>
+        <li>Integrated Azure Monitor + Prometheus/Grafana for full-stack observability.</li>
+        <li>Secured the cluster using Network Policies, Azure Policies, RBAC, Managed Identities and secret management via Key Vault.</li>
+      </ul>
+    </div>
+
+    <div class="project-block">
+      <div class="project-title">2. End-to-End Cloud Automation Using Terraform</div>
+      <ul>
+        <li>Developed reusable Terraform modules for compute, networking, AKS, App Gateway and security components.</li>
+        <li>Built automated multi-stage CI/CD pipeline (Terraform fmt &rarr; validate &rarr; plan &rarr; apply) using Azure DevOps/GitHub Actions.</li>
+        <li>Standardized IaC (Terraform) workflows, reducing manual provisioning time by 80% and improving repeatability & compliance.</li>
+      </ul>
+    </div>
+
+    <div class="project-block">
+      <div class="project-title">3. Lift-and-Shift Migration of Monolithic Application to Azure</div>
+      <ul>
+        <li>Migrated a legacy .NET/Python monolithic application from on-prem to Azure VMs.</li>
+        <li>Implemented VMSS + Load Balancer for high availability and auto-scaling.</li>
+        <li>Automated deployments using Azure DevOps pipelines with artifact packaging & VM Extension based deployment.</li>
+        <li>Set up Azure Backup, monitoring dashboards, NSG/Firewall rules for secure & reliable operations.</li>
+        <li>Implemented centralized logging using Log Analytics + diagnostic extensions, improving troubleshooting efficiency by 40%.</li>
+      </ul>
+    </div>
+
+    <!-- EARLIER EXPERIENCE -->
+    <h2>Earlier Experience</h2>
+    <table class="earlier-table">
+      <thead>
+        <tr>
+          <th>Designation</th>
+          <th>Organization</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>IT Engineer</td>
+          <td>Dream Machines (J.B. Khokhani & Co, Mumbai)</td>
+          <td>Mar 2016 – Jul 2017</td>
+        </tr>
+        <tr>
+          <td>IT Engineer</td>
+          <td>Super Techies</td>
+          <td>Aug 2014 – Feb 2016</td>
+        </tr>
+        <tr>
+          <td>Desktop Support Engineer</td>
+          <td>Gray Technologies Pvt. Ltd. (Dept. of Atomic Energy, Mumbai)</td>
+          <td>Jan 2013 – Jul 2014</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- CERTIFICATIONS & EDUCATION -->
+    <div class="row">
+      <div class="col">
+        <h2>Certifications</h2>
+        <ul>
+          <li>AWS Certified Solutions Architect – Associate (ID: W9T0MMELQF411D3W)</li>
+          <li>Microsoft Certified: Azure Administrator Associate (ID: 1702FA6DE9297169)</li>
+          <li>Red Hat Certified System Administrator (RHCSA)</li>
+          <li>Linux Training Certification | DevOps Training Certification</li>
+          <li>Diploma in Computer Hardware & Networking (TN110444)</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h2>Education</h2>
+        <ul>
+          <li>MCA (Master of Computer Applications) – Uttaranchal University — 2026</li>
+          <li>Master of Arts (M.A.) – Dr. Ram Manohar Lohiya Avadh University, Faizabad, UP — 2010</li>
+          <li>Bachelor of Arts (B.A.) – Dr. Ram Manohar Lohiya Avadh University, Faizabad, UP — 2007</li>
+        </ul>
+        <div style="margin-top: 10px; font-size: 12.5px;">
+          <b>Languages:</b> English (Professional) | Hindi (Native)
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

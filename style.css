@@ -5,40 +5,40 @@
 
 /* --- CSS Variables & Theme Tokens --- */
 :root {
-  /* Color Palette - Cyber Dark (Default) */
-  --bg-primary: #070a12;
-  --bg-secondary: #0c1220;
-  --bg-tertiary: #121a2d;
-  --bg-card: rgba(15, 23, 42, 0.72);
-  --bg-card-hover: rgba(22, 33, 58, 0.85);
-  --bg-glass: rgba(12, 18, 32, 0.65);
+  /* Color Palette - Clean White / Executive Light (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-glass: rgba(255, 255, 255, 0.95);
   
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(56, 189, 248, 0.4);
-  --border-focus: #38bdf8;
+  --border-subtle: #e2e8f0;
+  --border-hover: rgba(0, 120, 212, 0.45);
+  --border-focus: #0078d4;
 
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
   --text-muted: #64748b;
-  --text-highlight: #38bdf8;
+  --text-highlight: #0284c7;
 
   /* Accent Colors */
   --azure-blue: #0078d4;
-  --azure-cyan: #38bdf8;
-  --azure-glow: rgba(56, 189, 248, 0.25);
+  --azure-cyan: #0284c7;
+  --azure-glow: rgba(0, 120, 212, 0.15);
   --aws-orange: #ff9900;
-  --emerald-green: #10b981;
-  --emerald-glow: rgba(16, 185, 129, 0.25);
-  --devops-purple: #8b5cf6;
-  --devops-pink: #ec4899;
-  --warning-amber: #f59e0b;
-  --danger-rose: #f43f5e;
+  --emerald-green: #059669;
+  --emerald-glow: rgba(5, 150, 105, 0.15);
+  --devops-purple: #7c3aed;
+  --devops-pink: #db2777;
+  --warning-amber: #d97706;
+  --danger-rose: #e11d48;
 
   /* Gradients */
-  --grad-azure: linear-gradient(135deg, #0078d4 0%, #38bdf8 100%);
-  --grad-cyber: linear-gradient(135deg, #38bdf8 0%, #8b5cf6 100%);
-  --grad-card: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
-  --grad-hero-glow: radial-gradient(circle at 50% 20%, rgba(0, 120, 212, 0.18) 0%, rgba(56, 189, 248, 0.06) 40%, transparent 70%);
+  --grad-azure: linear-gradient(135deg, #0078d4 0%, #0284c7 100%);
+  --grad-cyber: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
+  --grad-card: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  --grad-hero-glow: radial-gradient(circle at 50% 20%, rgba(0, 120, 212, 0.08) 0%, rgba(2, 132, 199, 0.03) 40%, transparent 70%);
 
   /* Typography */
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -54,11 +54,11 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 20px 40px -8px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 30px var(--azure-glow);
-  --shadow-glow-emerald: 0 0 25px var(--emerald-glow);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 40px -8px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 0 25px rgba(0, 120, 212, 0.15);
+  --shadow-glow-emerald: 0 0 25px rgba(5, 150, 105, 0.15);
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -66,31 +66,33 @@
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- Light Mode Adaptation --- */
-[data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-tertiary: #e2e8f0;
-  --bg-card: rgba(255, 255, 255, 0.92);
-  --bg-card-hover: #ffffff;
-  --bg-glass: rgba(255, 255, 255, 0.82);
+/* --- Dark Theme Option --- */
+[data-theme="dark"] {
+  --bg-primary: #070a12;
+  --bg-secondary: #0c1220;
+  --bg-tertiary: #121a2d;
+  --bg-card: rgba(15, 23, 42, 0.72);
+  --bg-card-hover: rgba(22, 33, 58, 0.85);
+  --bg-glass: rgba(12, 18, 32, 0.65);
 
-  --border-subtle: rgba(15, 23, 42, 0.08);
-  --border-hover: rgba(0, 120, 212, 0.45);
-  --border-focus: #0078d4;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(56, 189, 248, 0.4);
+  --border-focus: #38bdf8;
 
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  --text-highlight: #0284c7;
+  --text-highlight: #38bdf8;
 
-  --grad-card: linear-gradient(145deg, rgba(255, 255, 255, 1) 0%, rgba(248, 250, 252, 0.9) 100%);
-  --grad-hero-glow: radial-gradient(circle at 50% 20%, rgba(0, 120, 212, 0.12) 0%, rgba(56, 189, 248, 0.04) 40%, transparent 70%);
+  --azure-cyan: #38bdf8;
+  --emerald-green: #10b981;
+  --grad-card: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --grad-hero-glow: radial-gradient(circle at 50% 20%, rgba(0, 120, 212, 0.18) 0%, rgba(56, 189, 248, 0.06) 40%, transparent 70%);
 
-  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 20px 40px -8px rgba(15, 23, 42, 0.12);
-  --shadow-glow: 0 0 25px rgba(0, 120, 212, 0.18);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 40px -8px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 30px rgba(56, 189, 248, 0.25);
 }
 
 /* --- Base & Reset --- */

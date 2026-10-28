@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- 1. Theme Management (Dark / Light) ---
   const themeToggleBtn = document.getElementById('theme-toggle');
   const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
-  const currentTheme = localStorage.getItem('ramji_portfolio_theme') || 'dark';
+  const currentTheme = localStorage.getItem('ramji_portfolio_theme') || 'light';
 
   function applyTheme(theme) {
     if (theme === 'light') {
