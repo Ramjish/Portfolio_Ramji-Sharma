@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramji Sharma - Resume | Azure DevOps Engineer</title>
+  
+  <!-- SEO & ATS Metadata -->
+  <meta name="description" content="Resume of Ramji Sharma - Azure DevOps Engineer with 11+ years total IT experience (5+ years in DevOps). Specialized in Terraform, AKS, AWS, Azure Landing Zones, and BFSI enterprise CI/CD.">
+  <meta name="author" content="Ramji Sharma">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* ==========================================================================
+       RESUME DESIGN SYSTEM - ATS & EXECUTIVE PRINT OPTIMIZED
+       ========================================================================== */
+    :root {
+      --primary: #0078d4;
+      --primary-dark: #005a9e;
+      --secondary: #0f172a;
+      --text: #1e293b;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --accent: #0ea5e9;
+      --tag-bg: #f1f5f9;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 13.5px;
+      -webkit-font-smoothing: antialiased;
+      padding: 40px 20px;
+    }
+
+    /* Floating Action Bar (Non-Printable) */
+    .action-bar {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-print {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-print:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-back {
+      background: var(--surface);
+      color: var(--secondary);
+      border-color: var(--border-dark);
+    }
+
+    .btn-back:hover {
+      background: var(--tag-bg);
+      color: var(--primary);
+    }
+
+    /* Resume Document Canvas */
+    .resume-canvas {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 48px 54px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Header Section */
+    .resume-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 20px;
+      margin-bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .candidate-name {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--secondary);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .candidate-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: var(--text-muted);
+    }
+
+    .contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .contact-item i {
+      color: var(--primary);
+      font-size: 12px;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--secondary);
+      border-bottom: 1.5px solid var(--border-dark);
+      padding-bottom: 5px;
+      margin-top: 22px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title i {
+      color: var(--primary);
+      font-size: 13px;
+    }
+
+    /* Professional Summary */
+    .summary-text {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Skills Table / Grid */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+    }
+
+    .skills-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .skill-cat {
+      width: 26%;
+      padding: 6px 10px 6px 0;
+      font-weight: 600;
+      color: var(--secondary);
+      font-size: 12.5px;
+      vertical-align: top;
+    }
+
+    .skill-val {
+      width: 74%;
+      padding: 6px 0;
+      color: var(--text);
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+
+    /* Work Experience & Projects */
+    .exp-item {
+      margin-bottom: 18px;
+      page-break-inside: avoid;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .exp-role {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .exp-company {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .exp-date {
+      font-size: 12px;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      color: var(--text-light);
+      white-space: nowrap;
+    }
+
+    .client-tag {
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--tag-bg);
+      border: 1px solid var(--border-dark);
+      padding: 1px 7px;
+      border-radius: 4px;
+      color: var(--text-muted);
+      margin-left: 6px;
+    }
+
+    .bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 4px;
+      font-size: 12.5px;
+      color: var(--text);
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    /* Key Projects Section */
+    .project-item {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+
+    .project-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Certifications & Education Grid */
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 12.5px;
+      color: var(--text);
+    }
+
+    .cert-item i {
+      color: var(--primary);
+      margin-top: 3px;
+      font-size: 12px;
+    }
+
+    .cert-id {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--primary-dark);
+      font-weight: 600;
+      background: var(--tag-bg);
+      padding: 1px 5px;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      display: inline-block;
+      margin-left: 4px;
+    }
+
+    .edu-item {
+      margin-bottom: 8px;
+      font-size: 12.5px;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .edu-meta {
+      color: var(--text-muted);
+      font-size: 11.5px;
+    }
+
+    /* Earlier Experience Table */
+    .earlier-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .earlier-table th {
+      text-align: left;
+      padding: 6px 8px;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      color: var(--secondary);
+    }
+
+    .earlier-table td {
+      padding: 6px 8px;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    /* ==========================================================================
+       PRINT STYLESHEET (A4 OPTIMIZED, ZERO UNNECESSARY UI)
+       ========================================================================== */
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm 14mm 14mm 14mm;
+      }
+
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        font-size: 11.5pt;
+        line-height: 1.45;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .resume-canvas {
+        max-width: 100% !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+      }
+
+      .candidate-name {
+        color: #000000 !important;
+        font-size: 24pt !important;
+      }
+
+      .candidate-title {
+        color: #005a9e !important;
+        font-size: 12.5pt !important;
+      }
+
+      .section-title {
+        color: #000000 !important;
+        border-bottom-color: #333333 !important;
+        font-size: 11.5pt !important;
+        margin-top: 14pt !important;
+        margin-bottom: 8pt !important;
+      }
+
+      .section-title i,
+      .contact-item i,
+      .cert-item i {
+        color: #005a9e !important;
+      }
+
+      .exp-role {
+        color: #000000 !important;
+        font-size: 11pt !important;
+      }
+
+      .exp-company {
+        color: #005a9e !important;
+      }
+
+      .bullet-list li::before {
+        color: #005a9e !important;
+      }
+
+      .cert-id {
+        border-color: #cccccc !important;
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Actions (Hidden on Print) -->
+  <div class="action-bar">
+    <a href="index.html" class="action-btn btn-back">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Portfolio Home</span>
+    </a>
+    <button onclick="window.print()" class="action-btn btn-print">
+      <i class="fa-solid fa-print"></i>
+      <span>Print / Save as PDF</span>
+    </button>
+  </div>
+
+  <!-- Printable Resume Sheet -->
+  <main class="resume-canvas">
+    
+    <!-- HEADER -->
+    <header class="resume-header">
+      <div>
+        <h1 class="candidate-name">RAMJI SHARMA</h1>
+        <div class="candidate-title">
+          <span>Azure DevOps Engineer</span>
+          <span>|</span>
+          <span>Cloud Infrastructure</span>
+          <span>|</span>
+          <span>CI/CD Specialist</span>
+        </div>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Mumbai, India</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+917021381066">+91-7021381066</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:ramjish0586@gmail.com">ramjish0586@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/ramji-sharma-aa762b8b/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ramji-sharma-aa762b8b</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <a href="https://ramjish.github.io/Portfolio_Ramji-Sharma/" target="_blank" rel="noopener noreferrer">Portfolio Live</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+      <h2 class="section-title"><i class="fa-solid fa-user-tie"></i> Professional Summary</h2>
+      <p class="summary-text">
+        Results-driven Azure DevOps Engineer with <strong>5+ years of hands-on experience (11 years total in IT)</strong> designing, automating, and managing cloud infrastructure on AWS and Azure for high-availability BFSI environments (<strong>HDFC Bank, IDFC First Bank</strong>). Proven expertise in building end-to-end CI/CD pipelines using Terraform automation with Azure DevOps, GitHub Actions, and GitLab CI/CD, and provisioning secure, well-governed cloud landing zones (Azure Landing Zone, AWS Landing Zone) with Terraform. Strong background in containerization (Docker, Kubernetes, AKS, EKS, GKE), DevSecOps practices, cloud cost optimization, Security, Compliance and automation using Ansible, Bash, Python, and PowerShell. Actively exploring agentic AI to streamline DevOps workflows and reduce manual effort.
+      </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+      <h2 class="section-title"><i class="fa-solid fa-sliders"></i> Technical Skills</h2>
+      <table class="skills-table">
+        <tbody>
+          <tr>
+            <td class="skill-cat">Cloud Platforms</td>
+            <td class="skill-val">Microsoft Azure, Amazon Web Services (AWS), Google Cloud (GCP)</td>
+          </tr>
+          <tr>
+            <td class="skill-cat">CI/CD Tools</td>
+            <td class="skill-val">Azure DevOps | GitHub Actions | DevSecOps | Git | GitHub | Azure Repos</td>
+          </tr>
+          <tr>
+            <td class="skill-cat">IaC & Automation</td>
+            <td class="skill-val">Terraform | ARM/Bicep | Azure Automation | Azure CLI | PowerShell | Bash | Python</td>
+          </tr>
+          <tr>
+            <td class="skill-cat">Containers & Orchestration</td>
+            <td class="skill-val">AKS | Kubernetes | Docker | Helm | ACR</td>
+          </tr>
+          <tr>
+            <td class="skill-cat">Source Control</td>
+            <td class="skill-val">Git, GitHub, Azure Repos, GitLab, Bitbucket</td>
+          </tr>
+          <tr>
+            <td class="skill-cat">Scripting</td>
+            <td class="skill-val">Bash, PowerShell, Python</td>
+          </tr>
+          <tr>
+            <td class="skill-cat">Security & Governance</td>
+            <td class="skill-val">Azure Policy | Azure Key Vault | tfsec | TFLint | TruffleHog | Super Linter | Terratest</td>
+          </tr>
+          <tr>
+            <td class="skill-cat">Monitoring & Observability</td>
+            <td class="skill-val">Azure Monitor | Log Analytics | Application Insights | Prometheus | Grafana | OpenCost | Dynatrace</td>
+          </tr>
+          <tr>
+            <td class="skill-cat">ITSM / Ticketing</td>
+            <td class="skill-val">ZOHO, ServiceNow</td>
+          </tr>
+          <tr>
+            <td class="skill-cat">Operating Systems</td>
+            <td class="skill-val">Red Hat Linux (RHEL), Ubuntu, Windows Server</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section>
+      <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
+
+      <!-- TheDigifac Services / HDFC Bank -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">DevOps Engineer</span>
+            <span style="color: var(--text-light); margin: 0 4px;">|</span>
+            <span class="exp-company">TheDigifac Services Pvt. Ltd.</span>
+            <span class="client-tag">Client: HDFC Bank</span>
+          </div>
+          <span class="exp-date">Jan 2026 – Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Creating, maintaining & managing GitHub Actions and Azure DevOps CI/CD pipelines for enterprise banking applications deployed on IIS, NGINX, AKS, EKS platform through Terraform.</li>
+          <li>Configured and managed Azure Cosmos DB, including database and container creation, partition key configuration, throughput (RU/s) management, and indexing policies.</li>
+          <li>Managed database access, Azure RBAC, monitoring, backup and restore, and performance optimization for reliable application operations.</li>
+          <li>Creating & managing Azure Landing Zone using Terraform, provisioning Azure VMs, VMSS, VNETs, NSGs, Load Balancers, Application Gateway, cloud security, cost optimization, DR, backup, compliance, and governance.</li>
+          <li>Creating, managing Terraform reusable child and parent Module, ForEach, map, Terraform variables, Terraform tfvars, providers, Terraform drift, Terraform backend block, Terraform tfstate locking using Azure Blob, S3 bucket with DynamoDB.</li>
+          <li>Manage Azure cloud infrastructure end-to-end and automate provisioning using Terraform, building reusable modules that reduced deployment cycles by 65% and manual effort by 40%.</li>
+          <li>Support production deployments and end-to-end platform monitoring for a banking system, maintaining 99% SLA compliance.</li>
+          <li>Design and manage Azure Landing Zones including subscriptions, VNets, NSGs, VPNs, RBAC and governance policies.</li>
+          <li>Experience with Docker, AKS, PowerShell/Azure CLI, and Blue/Green or Canary deploy.</li>
+          <li>Build YAML-based CI/CD pipelines, implement IaC (Bicep/Terraform); configure Azure Monitor; manage automated Cosmos DB deployments.</li>
+          <li>Perform Terraform security reviews and use tfsec, TFLint, TruffleHog and Super Linter for IaC, secrets and code-quality checks.</li>
+          <li>Enforced least-privilege access using Azure RBAC and PIM, managed enterprise network security with NSGs, Azure Firewall, WAF, and DDoS Protection.</li>
+          <li>Design and support CI/CD pipelines for infrastructure and application deployments.</li>
+          <li>Integrated SAST, DAST, SCA, Secret Scanning, IaC Scanning, and Container Security into CI/CD pipelines; implemented OIDC Workload Identity Federation to eliminate long-lived service principal secrets.</li>
+          <li>Managed and implement Azure DevOps automation, Git Branch Protection, CODEOWNERS, and mandatory PR reviews using Git Flow, Trunk-Based and GitHub branching strategies.</li>
+        </ul>
+      </div>
+
+      <!-- Puthur Infotech -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">DevOps Engineer</span>
+            <span style="color: var(--text-light); margin: 0 4px;">|</span>
+            <span class="exp-company">Puthur Infotech Pvt. Ltd.</span>
+          </div>
+          <span class="exp-date">Feb 2025 – Jan 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Managed cloud infrastructure and CI/CD operations supporting enterprise client deployments; implemented automation workflows using Terraform and Ansible for provisioning and configuration.</li>
+          <li>Managed Azure Landing Zone (VNETs, NSGs, Load Balancers, Application Gateway) covering cloud security, cost optimization, DR, backup, compliance, and governance.</li>
+          <li>Managed Java and Python-based applications in Azure; collaborated with a 10-member cross-functional team to ensure zero-downtime deployments.</li>
+          <li>Maintained semantic versioning and release management; prevented secret leakage via automated secret scanning; supported Azure Budgets, Cost Alerts, and Cost Analysis dashboards.</li>
+          <li>Managed High Availability architecture using Availability Zones, Load Balancers, and Geo-Replication; automated provisioning, validation, deployment, and rollback.</li>
+        </ul>
+      </div>
+
+      <!-- SPRUCE IT / Infosys -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">DevOps Engineer</span>
+            <span style="color: var(--text-light); margin: 0 4px;">|</span>
+            <span class="exp-company">SPRUCE IT Pvt. Ltd.</span>
+            <span class="client-tag">Client: Infosys</span>
+          </div>
+          <span class="exp-date">Nov 2024 – Feb 2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Worked on GitHub-to-GitLab migration and set up GitLab CI/CD pipelines in GCP environments.</li>
+          <li>Managed containerized workloads on Google Kubernetes Engine (GKE).</li>
+          <li>Supported Java and Python-based application build and release pipelines.</li>
+        </ul>
+      </div>
+
+      <!-- Vserv Infosystems / HDFC Bank -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">DevOps Engineer</span>
+            <span style="color: var(--text-light); margin: 0 4px;">|</span>
+            <span class="exp-company">Vserv Infosystems Pvt. Ltd.</span>
+            <span class="client-tag">Client: HDFC Bank</span>
+          </div>
+          <span class="exp-date">Feb 2023 – Jul 2024</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Implemented GitHub Actions CI/CD pipelines for .NET Core, Java, Salesforce, and MuleSoft API projects.</li>
+          <li>Integrated SonarQube for automated code quality checks across DEV, UAT, QA, and MAIN branches.</li>
+          <li>Managed multi-environment Git branching strategy and deployment automation on AWS and Azure.</li>
+          <li>Used ZOHO for incident and change request management across environments.</li>
+        </ul>
+      </div>
+
+      <!-- Team Computers / IDFC First Bank -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">DevOps Support Engineer</span>
+            <span style="color: var(--text-light); margin: 0 4px;">|</span>
+            <span class="exp-company">Team Computers Pvt. Ltd.</span>
+            <span class="client-tag">Client: IDFC First Bank</span>
+          </div>
+          <span class="exp-date">Jul 2021 – Feb 2023</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Provided AWS infrastructure support and managed the DevOps toolchain for banking applications.</li>
+          <li>Deployed and maintained containerized workloads using EKS, Docker, and AWS ECR.</li>
+          <li>Managed Linux (RHEL) and Windows server environments; resolved infrastructure incidents via ZOHO.</li>
+          <li>Supported DEV, UAT, Pre-PROD, and PROD environments with minimal downtime.</li>
+        </ul>
+      </div>
+
+      <!-- Techigent Technologies / HDFC Bank -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Software Support Engineer</span>
+            <span style="color: var(--text-light); margin: 0 4px;">|</span>
+            <span class="exp-company">Techigent Technologies Pvt. Ltd.</span>
+            <span class="client-tag">Client: HDFC Bank</span>
+          </div>
+          <span class="exp-date">Aug 2020 – Jan 2021</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Provided IT infrastructure and application support for banking systems across DEV, UAT, Pre-PROD, and PROD environments.</li>
+          <li>Provided AWS infrastructure support and managed the DevOps toolchain for banking applications.</li>
+        </ul>
+      </div>
+
+      <!-- Ace Brain / TISS Mumbai -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Linux Support Engineer</span>
+            <span style="color: var(--text-light); margin: 0 4px;">|</span>
+            <span class="exp-company">Ace Brain System & Software Pvt. Ltd.</span>
+            <span class="client-tag">Client: TISS Mumbai</span>
+          </div>
+          <span class="exp-date">Apr 2018 – Jun 2020</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Managed Linux/Windows servers, networking, and end-user support for Tata Institute of Social Sciences.</li>
+          <li>Supported DEV, UAT, Pre-PROD, and PROD environments with minimal downtime.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- KEY PROJECTS (HIGHLIGHTS) -->
+    <section>
+      <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Key Projects (Highlights)</h2>
+
+      <!-- Project 1 -->
+      <div class="project-item">
+        <h3 class="project-title">1. AKS Deployment & GitOps with ArgoCD</h3>
+        <ul class="bullet-list">
+          <li>Designed and deployed Azure Kubernetes Service (AKS) using Terraform (VNet, ACR, AGIC, Key Vault, Log Analytics).</li>
+          <li>Implemented GitOps workflow using ArgoCD with automated sync & progressive delivery.</li>
+          <li>Integrated Azure Monitor + Prometheus/Grafana for full-stack observability.</li>
+          <li>Secured the cluster using Network Policies, Azure Policies, RBAC, Managed Identities and secret management via Key Vault.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-item">
+        <h3 class="project-title">2. End-to-End Cloud Automation Using Terraform</h3>
+        <ul class="bullet-list">
+          <li>Developed reusable Terraform modules for compute, networking, AKS, App Gateway and security components.</li>
+          <li>Built automated multi-stage CI/CD pipeline (Terraform fmt &rarr; validate &rarr; plan &rarr; apply) using Azure DevOps/GitHub Actions.</li>
+          <li>Standardized IaC (Terraform) workflows, reducing manual provisioning time by 80% and improving repeatability & compliance.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-item">
+        <h3 class="project-title">3. Lift-and-Shift Migration of Monolithic Application to Azure</h3>
+        <ul class="bullet-list">
+          <li>Migrated a legacy .NET/Python monolithic application from on-prem to Azure VMs.</li>
+          <li>Implemented VMSS + Load Balancer for high availability and auto-scaling.</li>
+          <li>Automated deployments using Azure DevOps pipelines with artifact packaging & VM Extension based deployment.</li>
+          <li>Set up Azure Backup, monitoring dashboards, NSG/Firewall rules for secure & reliable operations.</li>
+          <li>Implemented centralized logging using Log Analytics + diagnostic extensions, improving troubleshooting efficiency by 40%.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EARLIER EXPERIENCE -->
+    <section>
+      <h2 class="section-title"><i class="fa-solid fa-clock-rotate-left"></i> Earlier Experience</h2>
+      <table class="earlier-table">
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Company / Organization</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>IT Engineer</strong></td>
+            <td>Dream Machines (J.B. Khokhani & Co, Mumbai)</td>
+            <td>Mar 2016 – Jul 2017</td>
+          </tr>
+          <tr>
+            <td><strong>IT Engineer</strong></td>
+            <td>Super Techies</td>
+            <td>Aug 2014 – Feb 2016</td>
+          </tr>
+          <tr>
+            <td><strong>Desktop Support Engineer</strong></td>
+            <td>Gray Technologies Pvt. Ltd. (Dept. of Atomic Energy, Mumbai)</td>
+            <td>Jan 2013 – Jul 2014</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CERTIFICATIONS & EDUCATION (2 COLUMNS) -->
+    <div class="two-col-grid" style="margin-top: 10px;">
+      <!-- CERTIFICATIONS -->
+      <section>
+        <h2 class="section-title"><i class="fa-solid fa-certificate"></i> Certifications</h2>
+        <div class="cert-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <div>
+            <strong>AWS Certified Solutions Architect – Associate</strong>
+            <div>ID: <span class="cert-id">W9T0MMELQF411D3W</span></div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <div>
+            <strong>Microsoft Certified: Azure Administrator Associate</strong>
+            <div>ID: <span class="cert-id">1702FA6DE9297169</span></div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <div><strong>Red Hat Certified System Administrator (RHCSA)</strong></div>
+        </div>
+        <div class="cert-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <div><strong>Linux Training Certification | DevOps Training Certification</strong></div>
+        </div>
+        <div class="cert-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <div>
+            <strong>Diploma in Computer Hardware & Networking</strong>
+            <div>ID: <span class="cert-id">TN110444</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION & LANGUAGES -->
+      <section>
+        <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education & Languages</h2>
+        <div class="edu-item">
+          <div class="edu-degree">Master of Computer Applications (MCA)</div>
+          <div class="edu-meta">Uttaranchal University — Graduating: 2026</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Master of Arts (M.A.)</div>
+          <div class="edu-meta">Dr. Ram Manohar Lohiya Avadh University, Faizabad, UP — 2010</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Bachelor of Arts (B.A.)</div>
+          <div class="edu-meta">Dr. Ram Manohar Lohiya Avadh University, Faizabad, UP — 2007</div>
+        </div>
+        <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border);">
+          <strong style="color: var(--secondary); font-size: 12.5px;">Languages:</strong>
+          <span style="font-size: 12.5px; color: var(--text-muted); margin-left: 6px;">English (Professional) | Hindi (Native)</span>
+        </div>
+      </section>
+    </div>
+
+  </main>
+</body>
+</html>
